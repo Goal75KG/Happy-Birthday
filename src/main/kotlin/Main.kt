@@ -1,3 +1,6 @@
+import java.lang.Exception
+import java.util.*
+
 fun main() {
     val layers = 5
 
@@ -17,7 +20,7 @@ fun readLineOrEmpty(prompt: String): String? {
         try {
             print(prompt)
             val userInput = readlnOrNull()
-            if (userInput == "32WYK") {
+            if (userInput?.lowercase(Locale.getDefault())?.contains("wyk") == true) {
                 throw Exception("You are banned!")
 
             } else return userInput
